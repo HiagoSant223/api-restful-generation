@@ -3,7 +3,8 @@ package aluno.model;
 
 import jakarta.persistence.*;
 
-@Entity(name = "Tabela Alunos")
+@Entity
+@Table(name = "Tab_alunos")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +24,9 @@ public class User {
     private Integer numeroSala;
 
 
+    public Integer getId(){
+        return id;
+    }
     public void setId(Integer id){
         this.id = id;
     }
